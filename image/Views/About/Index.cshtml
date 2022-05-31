@@ -1,0 +1,11 @@
+﻿@model image.Models.VMclass
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@foreach (var i in TempData["show_Data"] as List<image.Models.VMclass>)
+{
+    <img src="@Url.Content("~/Content/Image/"+i.image_path)" width="100px" height="100px" alt="home" />
+}
